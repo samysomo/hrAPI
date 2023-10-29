@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>staffPro</title>
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="" alt="Logo de staffPro"></a>
+        </div>
+        <nav class="navegacion">
+            <a href="crear_empleado.html">Nuevo empleado</a>
+            <a href="">Nosotros</a>
+            <a href="">Ayuda</a>
+        </nav>
+    </header>
+    <div class="contenedor barra_busqueda">
+        <div class="barra">
+            <input id="input_barra" type="text" placeholder="Introduce el nombre o id del empleado">
+        </div>
+        <div class="boton-verde">
+            <h2>Buscar</h2>
+        </div>
+    </div>
+    <main class="contenedor cuadro_empleados">
+        <table class="tabla_empleados">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                   <th>Nombre</th>
+                   <th>Apellido</th>
+                   <th>Correo</th>
+                   <th>Telefono</th> 
+                </tr>
+            </thead>
+            <tbody class="cuerpo_tabla">
+
+            </tbody>
+        </table>
+    </main>
+    <script src="src/js/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

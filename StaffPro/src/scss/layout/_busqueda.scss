@@ -1,0 +1,15 @@
+.barra_busqueda{
+    background-color: $verde;
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    .barra{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input{
+            height: 40%;
+            width: 80%;
+        }
+    }
+}

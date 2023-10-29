@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/app.css">
+    <title>staffPro</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="" alt="Logo de staffPro"></a>
+        </div>
+        <nav class="navegacion">
+            <a href="">Nosotros</a>
+            <a href="">Ayuda</a>
+        </nav>
+    </header>
+    <h1>Crear Nuevo Empleado</h1>
+    <main class="contenedor">
+        <form action="" class="formulario">
+            <fieldset>
+                <legend>Información Personal</legend>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Tu Nombre" id="nombre">
+
+                <label for="nombre">Apellido</label>
+                <input type="text" placeholder="Tu Apellido" id="apellido">
+
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Tu Correo" id="correo">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" placeholder="Tu Teléfono" id="telefono">
+
+                <label for="direccion">Direccion</label>
+                <input type="text" placeholder="Tu Direccion" id="direccion">
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Información de Contratación</legend>
+
+                <label for="opciones">Cargo</label>
+                <select name="" id="opciones">
+                    <option value="" disabled selected>-- Seleccione --</option>
+                    <option value="compra">Compra</option>
+                    <option value="venta">Venta</option>
+                </select>
+
+                <label for="fecha">Fecha</label>
+                <input type="date" name="" id="fecha">
+
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" min="09:00" max="18:00">
+
+                <label for="presupuesto">Salario</label>
+                <input type="number" placeholder="Salario">
+            </fieldset>
+            <fieldset>
+                <legend>Documentos del empleado</legend>
+            </fieldset>
+            <input type="submit" value="Enviar" class="boton-verde">
+        </form>
+    </main>
+    <script src="./src/js/crear.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

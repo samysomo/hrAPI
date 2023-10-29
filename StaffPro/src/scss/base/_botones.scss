@@ -1,0 +1,12 @@
+.boton-amarillo{
+    @include boton($beige, block);
+}
+
+.boton-amarillo-noblock{
+    @include boton($beige, inline-block);
+}
+
+.boton-verde{
+    @include boton($verde_oscuro, inline-block);
+}
+

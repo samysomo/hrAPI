@@ -1,0 +1,32 @@
+.cuadro_empleados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+
+    .tabla_empleados{
+        
+        thead{
+            background-color: $verde_oscuro;
+        }
+
+        th{
+            padding: 2rem 1.5rem;
+            font-weight: bold;
+            color: $blanco;
+        }
+
+        td{
+            padding: 1.5rem;
+            border-bottom: solid 1px $gris;
+        }
+
+        tbody tr{
+            cursor: pointer;
+            &:hover{
+                background-color: $gris;
+            }
+        }
+
+    }
+}

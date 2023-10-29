@@ -6,13 +6,13 @@ const jwt = require("jsonwebtoken");
 const db = require("../config/database")
 
 admin.post("/signin", async (req, res, next) =>{
-    const {nombre, apellido, correo}= req.body;
+    const {nombre, apellido, correo, password}= req.body;
     if (nombre && apellido && correo){
-        const query = `INSERT INTO taller_node.js (nombre, apellido, correo) VALUES ('${nombre}', '${apellido}', '${correo}')`;
+        const query = `INSERT INTO admin (nombre, apellido, correo, password) VALUES ('${nombre}', '${apellido}', '${correo}', '${password}')`;
         const rows = await db.query(query);
 
         if (rows.affectedRows == 1){
-            return res.status(201).json({code: 1, message: "Usuario insertado correctamente"});
+            return res.status(201).json({code: 201, message: "Usuario insertado correctamente"});
         }
         return res.status(500).json({code: 500, message: "Ocurrió un error"});
     }
@@ -23,7 +23,7 @@ admin.post("/signin", async (req, res, next) =>{
 admin.post("/login", async(req, res, next) =>{
     console.log(req.body);
     const {correo, password} = req.body;
-    const query = `SELECT * FROM taller_node.js WHERE correo = ${correo} AND password = ${password}`;
+    const query = `SELECT * FROM admin WHERE correo = '${correo}' AND password = '${password}'`;
     const rows = await db.query(query);
 
     if(correo && password){

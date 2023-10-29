@@ -1,0 +1,35 @@
+.cuadro_empleado{
+    margin-top: 6rem;
+    background-color: $verde;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+
+    .empleado_izquierda{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .foto-empleado{
+            height: 60%;
+            width: 60%;
+            border-bottom: solid 1.5rem $beige;
+            margin: 3rem 0;
+        }
+
+        .botones-empleado{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+    }
+
+    .empleado_derecha{
+        h1, h2, h3{
+            text-align: left;
+        }
+    }
+}
