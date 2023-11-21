@@ -18,8 +18,12 @@ function crearEmpleado(){
     let correo = document.getElementById("correo").value;
     let telefono = document.getElementById("telefono").value;
     let direccion = document.getElementById("direccion").value;
+    let tipo = document.getElementById("tipo").value;
+    let pass = document.getElementById("password").value;
+    let cargo = document.getElementById("cargo").value;
+    let fecha = document.getElementById("fecha").value;
+    let salario = document.getElementById("salario").value;
 
-    console.log(nombre)
     axios({
         headers: {"Authorization": "Bearer " + token},
         method: "post",
@@ -29,7 +33,12 @@ function crearEmpleado(){
             apellido: apellido,
             correo: correo,
             telefono: telefono,
-            direccion: direccion
+            direccion: direccion,
+            tipo: tipo,
+            password: pass,
+            cargo: cargo,
+            fecha_contratacion: fecha,
+            salario: salario
         }
     }).then(function(res){
         console.log(res);

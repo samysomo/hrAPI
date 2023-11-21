@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html"><img src="" alt="Logo de staffPro"></a>
+            <a href="index.html"><img class="img_logo" src="src/img/40bb2ca2-42eb-4ad3-b657-04203934d6e5.jpg" alt="Logo de staffPro"></a>
         </div>
         <nav class="navegacion">
             <a href="">Nosotros</a>
@@ -37,29 +37,28 @@
                 <label for="direccion">Direccion</label>
                 <input type="text" placeholder="Tu Direccion" id="direccion">
 
+                <label for="tipo">Permisos</label>
+                <select name="" id="tipo">
+                    <option value="" disabled selected>-- Seleccione --</option>
+                    <option value="admin">administrador</option>
+                    <option value="user">usuario</option>
+                </select>
+
+                <label for="direccion">Contraseña</label>
+                <input type="password" placeholder="Tu Contraseña" id="password">
 
             </fieldset>
             <fieldset>
                 <legend>Información de Contratación</legend>
 
-                <label for="opciones">Cargo</label>
-                <select name="" id="opciones">
-                    <option value="" disabled selected>-- Seleccione --</option>
-                    <option value="compra">Compra</option>
-                    <option value="venta">Venta</option>
-                </select>
+                <label for="cargo">Cargo</label>
+                <input type="text" placeholder="Cargo" id="cargo">
 
-                <label for="fecha">Fecha</label>
+                <label for="fecha">Fecha de Contratación</label>
                 <input type="date" name="" id="fecha">
 
-                <label for="hora">Hora</label>
-                <input type="time" id="hora" min="09:00" max="18:00">
-
-                <label for="presupuesto">Salario</label>
-                <input type="number" placeholder="Salario">
-            </fieldset>
-            <fieldset>
-                <legend>Documentos del empleado</legend>
+                <label for="Salario">Salario</label>
+                <input type="number" placeholder="Salario" id="salario">
             </fieldset>
             <input type="submit" value="Enviar" class="boton-verde">
         </form>

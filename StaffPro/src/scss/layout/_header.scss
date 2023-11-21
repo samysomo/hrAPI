@@ -1,11 +1,27 @@
 .header{
     background-color: $verde_oscuro;
-    height: 6rem;
+    @include desktop{
+        height: 8rem;
+    }
+    height: 6.5rem;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    
+    align-items: center;
+
+    .logo{
+        flex: 1;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img_logo{
+                width: 15%;
+            }
+        }
+    }
+
     .navegacion{
+        flex: 1;
         display: flex;
         gap: 4rem;
         a{

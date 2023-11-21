@@ -3,7 +3,7 @@
     background-color: $verde;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr 2fr;
 
     .empleado_izquierda{
         display: flex;
@@ -27,9 +27,17 @@
 
     }
 
-    .empleado_derecha{
-        h1, h2, h3{
-            text-align: left;
+    .datos_empleado{
+        h4{
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    .contacto_empleado{
+        h4{
+            text-align: center;
+            margin: 0;
         }
     }
 }

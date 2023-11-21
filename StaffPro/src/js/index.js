@@ -13,6 +13,10 @@ function init(){
                 "Authorization": "bearer " + localStorage.getItem("token")
             }
         }
+        if (localStorage.getItem("id_empleado")){
+            localStorage.removeItem("id_empleado");
+        }
+
         loadEmployee();
         const buscar = document.querySelector(".boton-verde");
 
@@ -71,9 +75,9 @@ function displayEmployee(emp){
         apellido_emp.innerHTML = e.apellido;
         tr.appendChild(apellido_emp);
 
-        let correo_emp = document.createElement("td");
-        correo_emp.innerHTML = e.correo;
-        tr.appendChild(correo_emp);
+        let cargo_emp = document.createElement("td");
+        cargo_emp.innerHTML = e.cargo;
+        tr.appendChild(cargo_emp);
 
         let telefono_emp = document.createElement("td");
         telefono_emp.innerHTML = e.telefono;

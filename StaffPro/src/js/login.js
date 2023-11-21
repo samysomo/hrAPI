@@ -19,7 +19,7 @@ function login(){
 
     axios({
         method: "post",
-        url: "http://localhost:3000/admin/login",
+        url: "http://localhost:3000/empleado/login",
         data: {
             correo: mail,
             password: pass
@@ -28,7 +28,12 @@ function login(){
         console.log(res);
         if(res.data.code === 200){
             localStorage.setItem("token", res.data.message);
-            window.location.href = "index.html"
+            if(res.data.user_type === "admin"){
+                window.location.href = "index.html"
+            } else if (res.data.user_type === "user"){
+                window.location.href = `user.html?id=${res.data.user_id}`
+            }
+            
         } else{
             alert("Usuario y/o contraaseña incorrectos")
         }

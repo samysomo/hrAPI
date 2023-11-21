@@ -1,16 +1,49 @@
-.login{
+
+.principal{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    input{
-        display: block;
+    margin-top: 10rem;
+    width: 50%;
+    background-color: $verde;
+    border-radius: 6%;
+    padding: 3rem;
+    @include tablet{
+        width: 25%;
     }
 
-    .botones{
-        margin-top: 3rem;
+    h1{
+        font-weight: bold;
+        color: $blanco;
+    }
+    
+    .login{
         display: flex;
-        gap: 5rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $blanco;
+    
+        input{
+            display: block;
+            margin-bottom: 2rem;
+            border: none;
+            height: 3rem;
+        }
+    
+        .botones{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3rem;
+            gap: 4rem;
+            @include desktop{
+                width: 100%;
+                flex-direction: row;
+            }
+        }
     }
 }
+

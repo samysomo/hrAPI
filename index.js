@@ -1,10 +1,9 @@
 const express = require("express");
 const app = express();
+const morgan = require("morgan");
 
 //Routers
-const admin = require("./routes/admin");
 const empleado = require("./routes/empleado");
-const morgan = require("morgan");
 
 //Middleware
 const auth = require("./middleware/auth");
@@ -20,14 +19,11 @@ app.use(express.urlencoded({extended: true}));
 //Inicio de la aplicaccion
 app.get("/", index);
 
-//Ruta de administradores
-app.use("/admin", admin);
+//Ruta de empleados
+app.use("/empleado", empleado);
 
 //Autenticacion
 app.use(auth);
-
-//Ruta de empleados
-app.use("/empleado", empleado);
 
 //Ruta notFound
 app.use(notFound);
